@@ -1,0 +1,10 @@
+.container {
+	margin: 50px auto;
+	padding: 30px;
+	max-width: 600px;
+	height: 400px;
+	background-color: rgb(210, 210, 210);
+	border-radius: 20px;
+	box-shadow: 0 0 5px rgb(12, 12, 12);
+	z-index: 1;
+}
