@@ -40,7 +40,7 @@ const Form = ({
 					onChange={({ target }) => setAmountIn(target.value)}
 				/>
 			</p>
-			<p className="form__paragraph"><span class="form__errorText">Musisz podać kwotę</span></p>
+			<p className="form__paragraph"><span className="form__errorText">Musisz podać kwotę</span></p>
 			<p className="form__paragraph">
 				<label className="form__labelText">
 					Waluta, na którą chcesz przeliczyć:
@@ -55,7 +55,7 @@ const Form = ({
 					<option>USD</option>
 				</select>
 			</p>
-			<div class="buttons">
+			<div className="buttons">
 			<button className="buttons__button buttons__button--count">Przelicz</button>
 			<button className="buttons__button" onClick={clearForm}>
 				Wyczyść
