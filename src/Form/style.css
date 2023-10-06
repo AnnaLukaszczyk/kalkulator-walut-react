@@ -1,50 +1,66 @@
+.container {
+	margin: 50px auto;
+	padding: 30px;
+	max-width: 600px;
+	height: 380px;
+	background-color: rgb(210, 210, 210);
+	border-radius: 20px;
+	box-shadow: 0 0 5px rgb(12, 12, 12);
+}
+
 .form {
-	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.form__paragraph {
+	display: grid;
+	grid-template-columns: 1fr 220px;
+}
+
+.form__paragraph--dimensions {
+margin-top: 36px;
 }
 
 .form__labelText {
-	margin: 0 30px;
-	width: 250px;
-	display: inline-block;
+	display: grid;
+	align-items: center;
 }
 
 .form__input,
 .form__currency {
 	padding: 10px;
-	width: 200px;
 	text-align: center;
 	border: 1px solid rgb(165, 165, 165);
 	border-radius: 5px;
 }
 
-.form__input {
-	margin-top: 20px;
-}
-
 .form__errorText {
-	margin-left: 350px;
-	margin-top: -10px;
+	grid-column-start: 2;
+	margin-top: -12px;
+	text-align: center;
 	font-size: 14px;
 	color: crimson;
 	visibility: hidden;
 }
 
-.button {
-	margin-top: 50px;
-	padding: 8px 40px;
+.buttons {
+	display: grid;
+	grid-template-columns: 160px 160px;
+	justify-content: space-evenly;
+}
+
+.buttons__button {
+	margin-top: 40px;
+	padding: 8px;
 	border-radius: 8px;
 	border: 1px solid rgb(165, 165, 165);
 	cursor: pointer;
 	transition: 0.3s;
 }
 
-.button:hover {
+.buttons__button:hover {
 	background-color: rgba(20, 120, 100, 0.445);
 	color: azure;
-}
-
-.button--count {
-	margin: 10px 50px 10px 96px;
 }
 
 .error {
