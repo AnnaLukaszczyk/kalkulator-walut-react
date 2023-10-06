@@ -15,7 +15,7 @@ const Form = ({
 
 	return (
 		<form className="form" onSubmit={onFormSubmit}>
-			<p>
+			<p className="form__paragraph">
 				<label className="form__labelText">Waluta, którą posiadasz:</label>
 				<select
 					className="form__currency"
@@ -27,7 +27,7 @@ const Form = ({
 					<option>USD</option>
 				</select>
 			</p>
-			<p>
+			<p  className="form__paragraph form__paragraph--dimensions">
 				<label className="form__labelText">
 					Kwota, którą chcesz przeliczyć:
 				</label>
@@ -40,8 +40,8 @@ const Form = ({
 					onChange={({ target }) => setAmountIn(target.value)}
 				/>
 			</p>
-			<p className="form__errorText">Musisz podać kwotę</p>
-			<p>
+			<p className="form__paragraph"><span class="form__errorText">Musisz podać kwotę</span></p>
+			<p className="form__paragraph">
 				<label className="form__labelText">
 					Waluta, na którą chcesz przeliczyć:
 				</label>
@@ -55,10 +55,12 @@ const Form = ({
 					<option>USD</option>
 				</select>
 			</p>
-			<button className="button button--count">Przelicz</button>
-			<button className="button" onClick={clearForm}>
+			<div class="buttons">
+			<button className="buttons__button buttons__button--count">Przelicz</button>
+			<button className="buttons__button" onClick={clearForm}>
 				Wyczyść
 			</button>
+            </div>
 		</form>
 	);
 };
