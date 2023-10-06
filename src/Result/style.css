@@ -4,7 +4,6 @@
 	justify-items: center;
 	margin: -130px auto;
 	padding: 50px 40px 0;
-	min-width: 440px;
 	max-width: 500px;
 	border-radius: 20px;
 	background: rgb(20, 120, 100);
@@ -13,7 +12,7 @@
 	z-index: -1;
 }
 
-.result__converted {	
+.result__converted {
 	margin: 0;
 	font-size: 40px;
 	font-weight: bold;
@@ -26,4 +25,24 @@
 
 .showResult {
 	margin-top: 20px;
+}
+
+@media (max-width: 550px) {
+	.showResult {
+		margin-top: 0;
+	}
+}
+
+@media (max-width: 400px) {
+	.result {
+		padding: 40px 20px 0;
+	}
+
+	.result__converted {
+		font-size: 32px;
+	}
+
+	.showResult {
+		margin-top: -12px;
+	}
 }

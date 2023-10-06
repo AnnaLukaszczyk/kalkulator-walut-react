@@ -1,13 +1,3 @@
-.container {
-	margin: 50px auto;
-	padding: 30px;
-	max-width: 600px;
-	height: 380px;
-	background-color: rgb(210, 210, 210);
-	border-radius: 20px;
-	box-shadow: 0 0 5px rgb(12, 12, 12);
-}
-
 .form {
 	padding: 0 20px;
 }
@@ -18,7 +8,7 @@
 }
 
 .form__paragraph--dimensions {
-margin-top: 36px;
+	margin-top: 36px;
 }
 
 .form__labelText {
@@ -69,4 +59,52 @@ margin-top: 36px;
 
 .inputColor {
 	background-color: rgba(221, 167, 178, 0.584);
+}
+
+@media (max-width: 550px) {
+	.form__paragraph {
+		grid-template-columns: 1fr;
+	}
+
+	.form__labelText {
+		margin-bottom: 10px;
+		justify-items: center;
+	}
+
+	.form__errorText {
+		grid-column-start: 1;
+	}
+
+	.buttons {
+		grid-template-columns: 120px 120px;
+	}
+
+	.buttons__button {
+		margin-top: 20px;
+	}
+}
+
+@media (max-width: 400px) {
+	.form__labelText {
+		font-size: 14px;
+	}
+
+	.form__input,
+	.form__currency {
+		margin-bottom: -10px;
+		font-size: 14px;
+	}
+
+	.form__errorText {
+		margin-top: 0;
+		font-size: 12px;
+	}
+
+	.buttons {
+		grid-template-columns: 100px 100px;
+	}
+
+	.buttons__button {
+		font-size: 14px;
+	}
 }
