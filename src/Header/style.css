@@ -3,7 +3,8 @@
 }
 
 .header__title {
-	text-align: center;
+	display: grid;
+	justify-items: center;
 	font-size: 50px;
 	color: azure;
 	text-shadow: 2px 2px 5px rgb(12, 12, 12);
