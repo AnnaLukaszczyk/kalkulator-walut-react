@@ -10,6 +10,7 @@ const Form = ({
 	clearForm,
 	errorInfo,
 	count,
+	errorColor,
 }) => {
 	const onFormSubmit = (event) => {
 		event.preventDefault();
@@ -34,7 +35,7 @@ const Form = ({
 					Kwota, którą chcesz przeliczyć:
 				</label>
 				<input
-					className="form__input"
+					className={`form__input${errorColor ? " errorColor" : ""}`}
 					type="number"
 					placeholder="Podaj kwotę"
 					step="0.01"
