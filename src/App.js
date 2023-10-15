@@ -15,6 +15,8 @@ function App() {
 		setCurrencyIn("PLN");
 		setAmountIn("");
 		setCurrencyOut("EUR");
+		setErrorInfo("");
+		setErrorColor("");
 	};
 
 	const count = () => {
