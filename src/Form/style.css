@@ -26,7 +26,8 @@
 
 .form__errorText {
 	grid-column-start: 2;
-	margin-top: -12px;
+	margin-top: -10px;
+	height: 14px;
 	text-align: center;
 	font-size: 14px;
 	color: crimson;
