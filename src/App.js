@@ -3,6 +3,7 @@ import Container from "./Container";
 import Header from "./Header";
 import Form from "./Form";
 import Result from "./Result";
+import currencies from "./Curriencies";
 
 function App() {
 	const [currencyIn, setCurrencyIn] = useState("PLN");
@@ -11,6 +12,7 @@ function App() {
 	const [errorInfo, setErrorInfo] = useState("");
 	const [errorColor, setErrorColor] = useState(false);
 	const [result, setResult] = useState(false);
+	const [amountOut, setAmountOut] = useState("");
 
 	const clearForm = () => {
 		setCurrencyIn("PLN");
@@ -30,6 +32,13 @@ function App() {
 		return;
 	};
 
+	const rateCurrencyIn = currencies.find(
+		({ name }) => name === currencyIn
+	).rate;
+	const rateCurrencyOut = currencies.find(
+		({ name }) => name === currencyOut
+	).rate;
+
 	const count = () => {
 		if (amountIn === "") {
 			setErrorInfo("Musisz podać kwotę");
@@ -39,6 +48,7 @@ function App() {
 			setErrorColor(true);
 		} else {
 			setResult(true);
+			setAmountOut(((+amountIn * rateCurrencyIn) / rateCurrencyOut).toFixed(4));
 		}
 	};
 
@@ -61,8 +71,12 @@ function App() {
 					clearError={clearError}
 				/>
 				<Result 
-					result={result}
-				/>
+				result={result}
+				amountIn={amountIn}
+				currencyIn={currencyIn}
+				amountOut={amountOut}
+				currencyOut={currencyOut}
+				 />
 			</Container>
 		</>
 	);
