@@ -16,6 +16,9 @@ This currency converter is also frendly for small devices like mobile phone.
 
 ![For mobile](https://github.com/loca20/kalkulator-walut-react/blob/main/public/for%20mobile.gif?raw=true)
 
+## Demo
+
+![Demo](https://loca20.github.io/kalkulator-walut-react/)
 
 ## Technologies
 
