@@ -1,3 +1,33 @@
+# Currency-converter
+
+![Currency converter](https://github.com/loca20/kalkulator-walut-react/blob/main/public/image%20for%20GitHub.jpg?raw=true)
+
+## Description
+
+If you want to recalculate any amount from PLN, EUR, GBP or USD to one of them you need to select your currency, then enter the amount you want to convert and select the currency you want to convert to.
+
+![Correct calculated](https://github.com/loca20/kalkulator-walut-react/blob/main/public/correct.gif?raw=true)
+
+To make the conversion, you must correctly fill in all the fields. Otherwise, an error will appear. The error will also appear if you enter 0 or a negative number as the amount.
+
+![Incorrect calculated](https://github.com/loca20/kalkulator-walut-react/blob/main/public/incorrect.gif?raw=true)
+
+This currency converter is also frendly for small devices like mobile phone. 
+
+![For mobile](https://github.com/loca20/kalkulator-walut-react/blob/main/public/for%20mobile.gif?raw=true)
+
+
+## Technologies
+
+In this project used:
+- HTML
+- CSS
+- JavaScript
+- BEM
+- Grid
+- React
+- Create React App (Webpack, Babel, ESLint, PostCSS, CSS Loader & Style Loader)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
