@@ -17,6 +17,7 @@
 	font-size: 40px;
 	font-weight: bold;
 	color: azure;
+	text-align: center;
 }
 
 .result__info {
@@ -31,6 +32,10 @@
 	.showResult {
 		margin-top: 0;
 	}
+
+	.result__converted {
+		font-size: 32px;
+	}
 }
 
 @media (max-width: 400px) {
@@ -39,7 +44,7 @@
 	}
 
 	.result__converted {
-		font-size: 32px;
+		font-size: 24px;
 	}
 
 	.showResult {

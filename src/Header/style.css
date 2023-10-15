@@ -12,7 +12,7 @@
 
 @media (max-width: 550px) {
 	.header {
-		padding-top: 30px;
+		padding-top: 10px;
 	}
 	.header__title {
 		font-size: 44px;
