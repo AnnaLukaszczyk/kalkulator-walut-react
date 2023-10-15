@@ -8,6 +8,8 @@ const Form = ({
 	currencyOut,
 	setCurrencyOut,
 	clearForm,
+	errorInfo,
+	count,
 }) => {
 	const onFormSubmit = (event) => {
 		event.preventDefault();
@@ -27,7 +29,7 @@ const Form = ({
 					<option>USD</option>
 				</select>
 			</p>
-			<p  className="form__paragraph form__paragraph--dimensions">
+			<p className="form__paragraph form__paragraph--dimensions">
 				<label className="form__labelText">
 					Kwota, którą chcesz przeliczyć:
 				</label>
@@ -40,7 +42,11 @@ const Form = ({
 					onChange={({ target }) => setAmountIn(target.value)}
 				/>
 			</p>
-			<p className="form__paragraph"><span className="form__errorText">Musisz podać kwotę</span></p>
+			<p className="form__paragraph">
+				<span className={`form__errorText${errorInfo ? " error" : ""}`}>
+					{errorInfo}
+				</span>
+			</p>
 			<p className="form__paragraph">
 				<label className="form__labelText">
 					Waluta, na którą chcesz przeliczyć:
@@ -56,11 +62,15 @@ const Form = ({
 				</select>
 			</p>
 			<div className="buttons">
-			<button className="buttons__button buttons__button--count">Przelicz</button>
-			<button className="buttons__button" onClick={clearForm}>
-				Wyczyść
-			</button>
-            </div>
+				<button
+					className="buttons__button buttons__button--count"
+					onClick={count}>
+					Przelicz
+				</button>
+				<button className="buttons__button" onClick={clearForm}>
+					Wyczyść
+				</button>
+			</div>
 		</form>
 	);
 };
