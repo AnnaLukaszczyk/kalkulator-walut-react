@@ -11,6 +11,7 @@ const Form = ({
 	errorInfo,
 	count,
 	errorColor,
+	clearError,
 }) => {
 	const onFormSubmit = (event) => {
 		event.preventDefault();
@@ -41,6 +42,7 @@ const Form = ({
 					step="0.01"
 					value={amountIn}
 					onChange={({ target }) => setAmountIn(target.value)}
+					onMouseOver={clearError}
 				/>
 			</p>
 			<p className="form__paragraph">

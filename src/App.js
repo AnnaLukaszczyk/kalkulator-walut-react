@@ -19,6 +19,15 @@ function App() {
 		setErrorColor("");
 	};
 
+	const clearError = () => {
+		if (amountIn <= 0) {
+			setErrorInfo("");
+			setErrorColor(false);
+			setAmountIn("");
+		}
+		return;
+	};
+
 	const count = () => {
 		if (amountIn === "") {
 			setErrorInfo("Musisz podać kwotę");
@@ -47,6 +56,7 @@ function App() {
 					errorInfo={errorInfo}
 					count={count}
 					errorColor={errorColor}
+					clearError={clearError}
 				/>
 				<Result />
 			</Container>
