@@ -10,6 +10,7 @@ function App() {
 	const [currencyOut, setCurrencyOut] = useState("EUR");
 	const [errorInfo, setErrorInfo] = useState("");
 	const [errorColor, setErrorColor] = useState(false);
+	const [result, setResult] = useState(false);
 
 	const clearForm = () => {
 		setCurrencyIn("PLN");
@@ -17,6 +18,7 @@ function App() {
 		setCurrencyOut("EUR");
 		setErrorInfo("");
 		setErrorColor("");
+		setResult("");
 	};
 
 	const clearError = () => {
@@ -36,7 +38,7 @@ function App() {
 			setErrorInfo("Podaj kwotę dodatnią!");
 			setErrorColor(true);
 		} else {
-			return;
+			setResult(true);
 		}
 	};
 
@@ -58,7 +60,9 @@ function App() {
 					errorColor={errorColor}
 					clearError={clearError}
 				/>
-				<Result />
+				<Result 
+					result={result}
+				/>
 			</Container>
 		</>
 	);
