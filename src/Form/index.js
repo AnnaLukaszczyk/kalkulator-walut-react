@@ -12,6 +12,7 @@ const Form = ({
 	count,
 	errorColor,
 	clearError,
+	hideResult
 }) => {
 	const onFormSubmit = (event) => {
 		event.preventDefault();
@@ -24,7 +25,8 @@ const Form = ({
 				<select
 					className="form__currency"
 					value={currencyIn}
-					onChange={({ target }) => setCurrencyIn(target.value)}>
+					onChange={({ target }) => setCurrencyIn(target.value)}
+					onClick={hideResult}>
 					<option>PLN</option>
 					<option>EUR</option>
 					<option>GBP</option>
@@ -43,6 +45,7 @@ const Form = ({
 					value={amountIn}
 					onChange={({ target }) => setAmountIn(target.value)}
 					onMouseOver={clearError}
+					onClick={hideResult}
 				/>
 			</p>
 			<p className="form__paragraph">
@@ -57,7 +60,8 @@ const Form = ({
 				<select
 					className="form__currency"
 					value={currencyOut}
-					onChange={({ target }) => setCurrencyOut(target.value)}>
+					onChange={({ target }) => setCurrencyOut(target.value)}
+					onClick={hideResult}>
 					<option>PLN</option>
 					<option>EUR</option>
 					<option>GBP</option>

@@ -35,6 +35,7 @@ function App() {
 	const rateCurrencyIn = currencies.find(
 		({ name }) => name === currencyIn
 	).rate;
+
 	const rateCurrencyOut = currencies.find(
 		({ name }) => name === currencyOut
 	).rate;
@@ -50,6 +51,13 @@ function App() {
 			setResult(true);
 			setAmountOut(((+amountIn * rateCurrencyIn) / rateCurrencyOut).toFixed(4));
 		}
+	};
+
+	const hideResult = () => {
+		if (result) {
+			setResult(false);
+		}
+		return;
 	};
 
 	return (
@@ -69,14 +77,15 @@ function App() {
 					count={count}
 					errorColor={errorColor}
 					clearError={clearError}
+					hideResult={hideResult}
 				/>
-				<Result 
-				result={result}
-				amountIn={amountIn}
-				currencyIn={currencyIn}
-				amountOut={amountOut}
-				currencyOut={currencyOut}
-				 />
+				<Result
+					result={result}
+					amountIn={amountIn}
+					currencyIn={currencyIn}
+					amountOut={amountOut}
+					currencyOut={currencyOut}
+				/>
 			</Container>
 		</>
 	);
