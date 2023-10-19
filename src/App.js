@@ -24,12 +24,12 @@ function App() {
 	};
 
 	const clearError = () => {
-		if (amountIn <= 0) {
-			setErrorInfo("");
-			setErrorColor(false);
-			setAmountIn("");
+		if (amountIn > 0) {
+			return;
 		}
-		return;
+		setErrorInfo("");
+		setErrorColor(false);
+		setAmountIn("");
 	};
 
 	const rateCurrencyIn = currencies.find(
@@ -49,7 +49,7 @@ function App() {
 			setErrorColor(true);
 		} else {
 			setResult(true);
-			setAmountOut(((+amountIn * rateCurrencyIn) / rateCurrencyOut));
+			setAmountOut((+amountIn * rateCurrencyIn) / rateCurrencyOut);
 		}
 	};
 
