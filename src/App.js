@@ -3,7 +3,7 @@ import Container from "./Container";
 import Header from "./Header";
 import Form from "./Form";
 import Result from "./Result";
-import currencies from "./Curriencies";
+import currencies from "./currencies";
 
 function App() {
 	const [currencyIn, setCurrencyIn] = useState("PLN");
