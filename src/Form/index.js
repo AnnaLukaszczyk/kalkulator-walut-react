@@ -1,4 +1,5 @@
 import "./style.css";
+import currencies from "../currencies";
 
 const Form = ({
 	currencyIn,
@@ -27,10 +28,14 @@ const Form = ({
 					value={currencyIn}
 					onChange={({ target }) => setCurrencyIn(target.value)}
 					onClick={hideResult}>
-					<option>PLN</option>
-					<option>EUR</option>
-					<option>GBP</option>
-					<option>USD</option>
+					{currencies.map((currency => (
+						<option
+						key={currency.name}
+						value={currency.name}
+						>
+						{currency.name}
+						</option>
+					)))}
 				</select>
 			</p>
 			<p className="form__paragraph form__paragraph--dimensions">
@@ -62,10 +67,14 @@ const Form = ({
 					value={currencyOut}
 					onChange={({ target }) => setCurrencyOut(target.value)}
 					onClick={hideResult}>
-					<option>PLN</option>
-					<option>EUR</option>
-					<option>GBP</option>
-					<option>USD</option>
+						{currencies.map((currency => (
+						<option
+						key={currency.name}
+						value={currency.name}
+						>
+						{currency.name}
+						</option>
+					)))}
 				</select>
 			</p>
 			<div className="buttons">
