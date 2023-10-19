@@ -11,9 +11,9 @@ const Form = ({
 	clearForm,
 	errorInfo,
 	count,
-	errorColor,
 	clearError,
-	hideResult
+	hideResult,
+	isError,
 }) => {
 	const onFormSubmit = (event) => {
 		event.preventDefault();
@@ -28,14 +28,11 @@ const Form = ({
 					value={currencyIn}
 					onChange={({ target }) => setCurrencyIn(target.value)}
 					onClick={hideResult}>
-					{currencies.map((currency => (
-						<option
-						key={currency.name}
-						value={currency.name}
-						>
-						{currency.name}
+					{currencies.map((currency) => (
+						<option key={currency.name} value={currency.name}>
+							{currency.name}
 						</option>
-					)))}
+					))}
 				</select>
 			</p>
 			<p className="form__paragraph form__paragraph--dimensions">
@@ -43,7 +40,7 @@ const Form = ({
 					Kwota, którą chcesz przeliczyć:
 				</label>
 				<input
-					className={`form__input${errorColor ? " errorColor" : ""}`}
+					className={`form__input${isError ? " errorColor" : ""}`}
 					type="number"
 					placeholder="Podaj kwotę"
 					step="0.01"
@@ -67,14 +64,11 @@ const Form = ({
 					value={currencyOut}
 					onChange={({ target }) => setCurrencyOut(target.value)}
 					onClick={hideResult}>
-						{currencies.map((currency => (
-						<option
-						key={currency.name}
-						value={currency.name}
-						>
-						{currency.name}
+					{currencies.map((currency) => (
+						<option key={currency.name} value={currency.name}>
+							{currency.name}
 						</option>
-					)))}
+					))}
 				</select>
 			</p>
 			<div className="buttons">
