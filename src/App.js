@@ -49,7 +49,7 @@ function App() {
 			setErrorColor(true);
 		} else {
 			setResult(true);
-			setAmountOut(((+amountIn * rateCurrencyIn) / rateCurrencyOut).toFixed(4));
+			setAmountOut(((+amountIn * rateCurrencyIn) / rateCurrencyOut));
 		}
 	};
 
