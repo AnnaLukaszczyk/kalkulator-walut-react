@@ -57,7 +57,6 @@ function App() {
 		if (result) {
 			setResult(false);
 		}
-		return;
 	};
 
 	return (
