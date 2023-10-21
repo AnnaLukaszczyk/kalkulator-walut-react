@@ -2,9 +2,8 @@ import "./style.css";
 import { useState, useEffect } from "react";
 
 const Clock = () => {
-    const [date, setDate] = useState(new Date());
+	const [date, setDate] = useState(new Date());
 
-	
 	const day = date.toLocaleDateString(undefined, {
 		weekday: "long",
 		day: "numeric",
@@ -22,11 +21,13 @@ const Clock = () => {
 		};
 	}, []);
 
-    return (
-        <div className="clock">
-            <p>Dzisiaj jest {day}, {time}</p>
-        </div>
-    );
+	return (
+		<div className="clock">
+			<p>
+				Dzisiaj jest {day}, {time}
+			</p>
+		</div>
+	);
 };
 
 export default Clock;
