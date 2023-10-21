@@ -1,0 +1,7 @@
+.clock {
+	display: flex;
+	justify-content: flex-end;
+	margin: 0;
+	font-family: monospace;
+	color: gray;
+}
