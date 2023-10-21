@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/kalkulator-walut-react/static/css/main.afcd041f.css",
-    "main.js": "/kalkulator-walut-react/static/js/main.42eae86b.js",
+    "main.css": "/kalkulator-walut-react/static/css/main.76eaf844.css",
+    "main.js": "/kalkulator-walut-react/static/js/main.071d0a09.js",
     "static/js/787.fcf5d422.chunk.js": "/kalkulator-walut-react/static/js/787.fcf5d422.chunk.js",
     "index.html": "/kalkulator-walut-react/index.html",
-    "main.afcd041f.css.map": "/kalkulator-walut-react/static/css/main.afcd041f.css.map",
-    "main.42eae86b.js.map": "/kalkulator-walut-react/static/js/main.42eae86b.js.map",
+    "main.76eaf844.css.map": "/kalkulator-walut-react/static/css/main.76eaf844.css.map",
+    "main.071d0a09.js.map": "/kalkulator-walut-react/static/js/main.071d0a09.js.map",
     "787.fcf5d422.chunk.js.map": "/kalkulator-walut-react/static/js/787.fcf5d422.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.afcd041f.css",
-    "static/js/main.42eae86b.js"
+    "static/css/main.76eaf844.css",
+    "static/js/main.071d0a09.js"
   ]
 }
