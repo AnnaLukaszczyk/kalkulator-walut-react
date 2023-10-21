@@ -28,6 +28,7 @@ function App() {
 		if (amountIn > 0) {
 			return;
 		}
+
 		setErrorInfo("");
 		setAmountIn("");
 	};
