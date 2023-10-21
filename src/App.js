@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Container from "./Container";
 import Header from "./Header";
+import Clock from "./Clock";
 import Form from "./Form";
 import Result from "./Result";
 import currencies from "./currencies";
@@ -65,6 +66,7 @@ function App() {
 			<Header />
 
 			<Container>
+				<Clock />
 				<Form
 					currencyIn={currencyIn}
 					setCurrencyIn={setCurrencyIn}
