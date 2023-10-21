@@ -1,5 +1,5 @@
 .form {
-	padding: 0 20px;
+	padding: 6px 20px;
 }
 
 .form__paragraph {
@@ -41,7 +41,7 @@
 }
 
 .buttons__button {
-	margin-top: 40px;
+	margin-top: 20px;
 	padding: 8px;
 	border-radius: 8px;
 	border: 1px solid rgb(165, 165, 165);

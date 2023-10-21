@@ -25,7 +25,7 @@
 }
 
 .showResult {
-	margin-top: 20px;
+	margin-top: 0;
 }
 
 @media (max-width: 550px) {
