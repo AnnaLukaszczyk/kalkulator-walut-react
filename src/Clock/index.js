@@ -4,12 +4,16 @@ import { useState, useEffect } from "react";
 const Clock = () => {
 	const [date, setDate] = useState(new Date());
 
-	const day = date.toLocaleDateString(undefined, {
-		weekday: "long",
-		day: "numeric",
-		month: "long",
-	});
-	const time = date.toLocaleTimeString();
+	const formatDate = (date) => {
+		const day = date.toLocaleDateString(undefined, {
+			weekday: "long",
+			day: "numeric",
+			month: "long",
+		});
+		const time = date.toLocaleTimeString();
+
+		return `${day}, ${time}`;
+	};
 
 	useEffect(() => {
 		const intervalId = setInterval(() => {
@@ -23,9 +27,7 @@ const Clock = () => {
 
 	return (
 		<div className="clock">
-			<p>
-				Dzisiaj jest {day}, {time}
-			</p>
+			<p>Dzisiaj jest {formatDate(date)}</p>
 		</div>
 	);
 };
