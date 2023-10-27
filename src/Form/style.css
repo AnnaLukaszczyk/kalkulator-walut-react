@@ -86,6 +86,10 @@
 }
 
 @media (max-width: 400px) {
+	.form {
+		padding-top: 0;
+	}
+
 	.form__labelText {
 		font-size: 14px;
 	}
