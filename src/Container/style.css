@@ -1,6 +1,6 @@
 .container {
 	margin: 50px auto;
-	padding: 8px 30px;
+	padding: 8px 28px;
 	max-width: 600px;
 	height: 380px;
 	background-color: rgb(210, 210, 210);
@@ -18,7 +18,7 @@
 @media (max-width: 550px) {
 	.container {
 		margin-top: 0;
-		height: 440px;
+		height: 460px;
 	}
 }
 
