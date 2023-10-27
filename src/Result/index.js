@@ -1,13 +1,14 @@
-import "./style.css";
+import { ResultInfo, Info, Calculation } from "./styled";
 
 const Result = ({ result, amountIn, currencyIn, amountOut, currencyOut }) => (
-	<div className={`result${result ? " showResult" : ""}`}>
-		<p className="result__converted">
+	<ResultInfo
+	$showResult={result}>
+		<Calculation>
 			{amountIn}&nbsp;{currencyIn} = {amountOut ? amountOut.toFixed(4) : null}
 			&nbsp;{currencyOut}
-		</p>
-		<p className="result__info">Przeliczono po kursie z dnia 28.08.2023</p>
-	</div>
+		</Calculation>
+		<Info>Przeliczono po kursie z dnia 28.08.2023</Info>
+	</ResultInfo>
 );
 
 export default Result;
