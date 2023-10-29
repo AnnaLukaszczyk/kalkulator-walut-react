@@ -1,20 +1,4 @@
-.form {
-	padding: 6px 20px;
-}
 
-.form__paragraph {
-	display: grid;
-	grid-template-columns: 1fr 220px;
-}
-
-.form__paragraph--dimensions {
-	margin-top: 36px;
-}
-
-.form__labelText {
-	display: grid;
-	align-items: center;
-}
 
 .form__input,
 .form__currency {
@@ -63,14 +47,6 @@
 }
 
 @media (max-width: 550px) {
-	.form__paragraph {
-		grid-template-columns: 1fr;
-	}
-
-	.form__labelText {
-		margin-bottom: 10px;
-		justify-items: center;
-	}
 
 	.form__errorText {
 		grid-column-start: 1;
@@ -86,14 +62,7 @@
 }
 
 @media (max-width: 400px) {
-	.form {
-		padding-top: 0;
-	}
 
-	.form__labelText {
-		margin-top: -10px;
-		font-size: 13px;
-	}
 
 	.form__input,
 	.form__currency {
@@ -112,9 +81,5 @@
 
 	.buttons__button {
 		font-size: 14px;
-	}
-
-	.form__paragraph--dimensions {
-		margin-top: 46px;
 	}
 }
