@@ -1,5 +1,6 @@
 import "./style.css";
 import currencies from "../currencies";
+import { StyledForm, Paragraph, ParagraphWithOtherDimensions, Label } from "./styled"
 
 const Form = ({
 	currencyIn,
@@ -20,9 +21,9 @@ const Form = ({
 	};
 
 	return (
-		<form className="form" onSubmit={onFormSubmit}>
-			<p className="form__paragraph">
-				<label className="form__labelText">Waluta, którą posiadasz:</label>
+		<StyledForm onSubmit={onFormSubmit}>
+			<Paragraph>
+				<Label>Waluta, którą posiadasz:</Label>
 				<select
 					className="form__currency"
 					value={currencyIn}
@@ -34,11 +35,11 @@ const Form = ({
 						</option>
 					))}
 				</select>
-			</p>
-			<p className="form__paragraph form__paragraph--dimensions">
-				<label className="form__labelText">
+			</Paragraph>
+			<ParagraphWithOtherDimensions>
+				<Label>
 					Kwota, którą chcesz przeliczyć:
-				</label>
+				</Label>
 				<input
 					className={`form__input${isError ? " errorColor" : ""}`}
 					type="number"
@@ -49,16 +50,16 @@ const Form = ({
 					onMouseOver={clearError}
 					onClick={hideResult}
 				/>
-			</p>
-			<p className="form__paragraph">
+			</ParagraphWithOtherDimensions>
+			<Paragraph>
 				<span className={`form__errorText${errorInfo ? " error" : ""}`}>
 					{errorInfo}
 				</span>
-			</p>
-			<p className="form__paragraph">
-				<label className="form__labelText">
+			</Paragraph>
+			<Paragraph>
+				<Label>
 					Waluta, na którą chcesz przeliczyć:
-				</label>
+				</Label>
 				<select
 					className="form__currency"
 					value={currencyOut}
@@ -70,7 +71,7 @@ const Form = ({
 						</option>
 					))}
 				</select>
-			</p>
+			</Paragraph>
 			<div className="buttons">
 				<button
 					className="buttons__button buttons__button--count"
@@ -81,7 +82,7 @@ const Form = ({
 					Wyczyść
 				</button>
 			</div>
-		</form>
+		</StyledForm>
 	);
 };
 
