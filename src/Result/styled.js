@@ -46,6 +46,6 @@ export const Calculation = styled(Info)`
 	}
 
 @media (max-width: 400px) {
-		font-size: 24px;
+		font-size: 22px;
 	}
 `;

@@ -25,6 +25,7 @@
 	}
 
 	.header__title {
-		font-size: 34px;
+		margin: 18px;
+		font-size: 32px;
 	}
 }

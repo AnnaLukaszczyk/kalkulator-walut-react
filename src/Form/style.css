@@ -91,7 +91,8 @@
 	}
 
 	.form__labelText {
-		font-size: 14px;
+		margin-top: -10px;
+		font-size: 13px;
 	}
 
 	.form__input,
@@ -111,5 +112,9 @@
 
 	.buttons__button {
 		font-size: 14px;
+	}
+
+	.form__paragraph--dimensions {
+		margin-top: 46px;
 	}
 }
