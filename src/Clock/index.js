@@ -8,7 +8,7 @@ const Clock = () => {
 		const day = date.toLocaleDateString(undefined, {
 			weekday: "long",
 			day: "numeric",
-			month: "long",
+			month: "short",
 		});
 		const time = date.toLocaleTimeString();
 
