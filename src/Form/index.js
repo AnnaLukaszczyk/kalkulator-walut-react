@@ -1,6 +1,6 @@
 import "./style.css";
 import currencies from "../currencies";
-import { StyledForm, Paragraph, ParagraphWithOtherDimensions, Label } from "./styled"
+import { StyledForm, Paragraph, ParagraphWithOtherDimensions, Label, Select, Input, ErrorText, Buttons, Button } from "./styled";
 
 const Form = ({
 	currencyIn,
@@ -24,8 +24,7 @@ const Form = ({
 		<StyledForm onSubmit={onFormSubmit}>
 			<Paragraph>
 				<Label>Waluta, którą posiadasz:</Label>
-				<select
-					className="form__currency"
+				<Select
 					value={currencyIn}
 					onChange={({ target }) => setCurrencyIn(target.value)}
 					onClick={hideResult}>
@@ -34,14 +33,12 @@ const Form = ({
 							{currency.name}
 						</option>
 					))}
-				</select>
+				</Select>
 			</Paragraph>
 			<ParagraphWithOtherDimensions>
-				<Label>
-					Kwota, którą chcesz przeliczyć:
-				</Label>
-				<input
-					className={`form__input${isError ? " errorColor" : ""}`}
+				<Label>Kwota, którą chcesz przeliczyć:</Label>
+				<Input
+					$errorColor={isError}
 					type="number"
 					placeholder="Podaj kwotę"
 					step="0.01"
@@ -52,16 +49,15 @@ const Form = ({
 				/>
 			</ParagraphWithOtherDimensions>
 			<Paragraph>
-				<span className={`form__errorText${errorInfo ? " error" : ""}`}>
+				<ErrorText
+				$error={errorInfo}
+				>
 					{errorInfo}
-				</span>
+				</ErrorText>
 			</Paragraph>
 			<Paragraph>
-				<Label>
-					Waluta, na którą chcesz przeliczyć:
-				</Label>
-				<select
-					className="form__currency"
+				<Label>Waluta, na którą chcesz przeliczyć:</Label>
+				<Select
 					value={currencyOut}
 					onChange={({ target }) => setCurrencyOut(target.value)}
 					onClick={hideResult}>
@@ -70,18 +66,18 @@ const Form = ({
 							{currency.name}
 						</option>
 					))}
-				</select>
+				</Select>
 			</Paragraph>
-			<div className="buttons">
-				<button
-					className="buttons__button buttons__button--count"
+			<Buttons>
+				<Button
 					onClick={count}>
 					Przelicz
-				</button>
-				<button className="buttons__button" onClick={clearForm}>
+				</Button>
+				<Button 
+				onClick={clearForm}>
 					Wyczyść
-				</button>
-			</div>
+				</Button>
+			</Buttons>
 		</StyledForm>
 	);
 };
