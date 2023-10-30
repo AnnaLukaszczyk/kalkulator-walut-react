@@ -5,21 +5,21 @@ export const Main = styled.main`
 	padding: 8px 28px;
 	max-width: 600px;
 	height: 380px;
-	background-color: rgb(210, 210, 210);
+	background-color: ${({ theme }) => theme.colors.containerColor};
 	border-radius: 20px;
-	box-shadow: 0 0 5px rgb(12, 12, 12);
+	box-shadow: 0 0 5px ${({ theme }) => theme.colors.shadowColor};
 	z-index: 1;
 
-	@media (max-width: 640px) {
+	@media (max-width: ${({ theme }) => theme.breakpoints.iPad}px) {
 		margin: 50px 20px;
 	}
 
-	@media (max-width: 550px) {
+	@media (max-width: ${({ theme }) => theme.breakpoints.mediumMobile}px) {
 		margin-top: 0;
 		height: 460px;
 	}
 
-	@media (max-width: 400px) {
+	@media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}px) {
 		padding: 6px;
 		height: 376px;
 	}

@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 export const StyledForm = styled.form`
 	padding: 6px 20px;
 
-	@media (max-width: 400px) {
+	@media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}px) {
 		padding-top: 0;
 	}
 `;
@@ -12,7 +12,7 @@ export const Paragraph = styled.p`
 	display: grid;
 	grid-template-columns: 1fr 220px;
 
-	@media (max-width: 550px) {
+	@media (max-width: ${({ theme }) => theme.breakpoints.mediumMobile}px) {
 		grid-template-columns: 1fr;
 	}
 `;
@@ -20,7 +20,7 @@ export const Paragraph = styled.p`
 export const ParagraphWithOtherDimensions = styled(Paragraph)`
 	margin-top: 36px;
 
-	@media (max-width: 400px) {
+	@media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}px) {
 		margin-top: 46px;
 	}
 `;
@@ -29,12 +29,12 @@ export const Label = styled.label`
 	display: grid;
 	align-items: center;
 
-	@media (max-width: 550px) {
+	@media (max-width: ${({ theme }) => theme.breakpoints.mediumMobile}px) {
 		margin-bottom: 10px;
 		justify-items: center;
 	}
 
-	@media (max-width: 400px) {
+	@media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}px) {
 		margin-top: -10px;
 		font-size: 13px;
 	}
@@ -46,7 +46,7 @@ export const Select = styled.select`
 	border: 1px solid rgb(165, 165, 165);
 	border-radius: 5px;
 
-	@media (max-width: 400px) {
+	@media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}px) {
 		margin-bottom: -10px;
 		font-size: 14px;
 	}
@@ -58,7 +58,7 @@ export const Input = styled.input`
 	border: 1px solid rgb(165, 165, 165);
 	border-radius: 5px;
 
-	@media (max-width: 400px) {
+	@media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}px) {
 		margin-bottom: -10px;
 		font-size: 14px;
 	}
@@ -74,14 +74,14 @@ export const ErrorText = styled.span`
 	height: 14px;
 	text-align: center;
 	font-size: 14px;
-	color: crimson;
+	color: ${({ theme }) => theme.colors.errorColor};
 	visibility: hidden;
 
-	@media (max-width: 550px) {
+	@media (max-width: ${({ theme }) => theme.breakpoints.mediumMobile}px) {
 		grid-column-start: 1;
 	}
 
-	@media (max-width: 400px) {
+	@media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}px) {
 		margin-top: 0;
 		font-size: 12px;
 	}
@@ -96,10 +96,10 @@ export const Buttons = styled.div`
 	grid-template-columns: 160px 160px;
 	justify-content: space-evenly;
 
-	@media (max-width: 550px) {
+	@media (max-width: ${({ theme }) => theme.breakpoints.mediumMobile}px) {
 		grid-template-columns: 120px 120px;
 	}
-	@media (max-width: 400px) {
+	@media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}px) {
 		grid-template-columns: 100px 100px;
 	}
 `
@@ -108,19 +108,20 @@ export const Button = styled.button`
 	margin-top: 20px;
 	padding: 8px;
 	border-radius: 8px;
-	border: 1px solid rgb(165, 165, 165);
+	border: 1px solid ${({ theme }) => theme.colors.buttonsBorderColor};
 	cursor: pointer;
 	transition: 0.3s;
 
 	&:hover {
-	background-color: rgba(20, 120, 100, 0.445);
-	color: azure;
+	background-color: ${({ theme }) => theme.colors.buttonsHoverColor};
+	color: ${({ theme }) => theme.colors.secondColor};
 }
-@media (max-width: 550px) {
+
+@media (max-width: ${({ theme }) => theme.breakpoints.mediumMobile}px) {
 		margin-top: 20px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}px) {
 		font-size: 14px;
 }
 `
