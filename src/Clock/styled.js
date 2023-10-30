@@ -12,8 +12,6 @@ export const StyledClock = styled.div`
 		font-size: 12px;
 }
 
-
-
 @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}px) {
 	font-size: 10px;
 }
