@@ -1,4 +1,3 @@
-import "./style.css";
 import currencies from "../currencies";
 import { StyledForm, Paragraph, ParagraphWithOtherDimensions, Label, Select, Input, ErrorText, Buttons, Button } from "./styled";
 
