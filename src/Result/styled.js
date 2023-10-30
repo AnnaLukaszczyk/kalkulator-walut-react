@@ -32,6 +32,11 @@ export const ResultInfo = styled.div`
 
 export const Info = styled.p`
 font-size: 12px;
+
+@media (max-width: 400px) {
+		margin-top: 8px;
+		font-size: 11px;
+	}
 `;
 
 export const Calculation = styled(Info)`
@@ -42,10 +47,11 @@ export const Calculation = styled(Info)`
 	text-align: center;
 
     @media (max-width: 550px) {
-		font-size: 32px;
+		font-size: 28px;
 	}
 
 @media (max-width: 400px) {
+	margin-top: 8px;
 		font-size: 22px;
 	}
 `;
