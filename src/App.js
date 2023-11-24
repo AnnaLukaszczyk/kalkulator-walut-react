@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useRatesData } from "./useRatesData";
+import { useRatesDay } from "./useRatesDay";
 import Container from "./Container";
 import Header from "./Header";
 import Clock from "./Clock";
@@ -9,6 +10,7 @@ import LoadingAndError from "./LoadingAndError";
 
 function App() {
 	const { ratesData } = useRatesData();
+	const formattedRatesDay = useRatesDay(ratesData);
 	const [currencyIn, setCurrencyIn] = useState("PLN");
 	const [amountIn, setAmountIn] = useState("");
 	const [currencyOut, setCurrencyOut] = useState("EUR");
@@ -87,6 +89,7 @@ function App() {
 					currencyIn={currencyIn}
 					amountOut={amountOut}
 					currencyOut={currencyOut}
+					formattedRatesDay={formattedRatesDay}
 				/>
 				</LoadingAndError>
 			</Container>
