@@ -5,6 +5,7 @@ import Header from "./Header";
 import Clock from "./Clock";
 import Form from "./Form";
 import Result from "./Result";
+import LoadingAndError from "./LoadingAndError";
 
 function App() {
 	const { ratesData } = useRatesData();
@@ -64,6 +65,7 @@ function App() {
 
 			<Container>
 				<Clock />
+				<LoadingAndError ratesData={ratesData}>
 				<Form
 					currencyIn={currencyIn}
 					setCurrencyIn={setCurrencyIn}
@@ -86,6 +88,7 @@ function App() {
 					amountOut={amountOut}
 					currencyOut={currencyOut}
 				/>
+				</LoadingAndError>
 			</Container>
 		</>
 	);
