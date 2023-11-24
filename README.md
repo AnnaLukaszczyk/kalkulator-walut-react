@@ -28,8 +28,11 @@ In this project used:
 - JavaScript
 - BEM
 - Grid
-- React
+- media queries
+- React.js
 - Create React App (Webpack, Babel, ESLint, PostCSS, CSS Loader & Style Loader)
+- Custom Hooks
+- API Integration
 
 # Getting Started with Create React App
 
