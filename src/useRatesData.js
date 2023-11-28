@@ -1,8 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { JSON_URL } from "./URL.js"
 
-const JSON_URL = "https://raw.githubusercontent.com/loca20/kalkulator-walut-react/main/public/currencyRates.json";
-//const API_URL = "https://api.currencyapi.com/v3/latest?apikey=cur_live_2HBIAKhdpMCHaQBq2UCjf5dGv3esN6WuAhXyyBIq&currencies=&base_currency=PLN"
 
 export const useRatesData = () => {
 	const [ratesData, setRatesData] = useState({ status: "loading", data: null });
