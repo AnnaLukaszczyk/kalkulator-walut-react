@@ -52,7 +52,7 @@ function App() {
 		const rateCurrencyOut = ratesData?.data?.data?.[currencyOut].value;
 
 		setResult(true);
-		setAmountOut((+amountIn * rateCurrencyIn) / rateCurrencyOut);
+		setAmountOut((+amountIn * rateCurrencyOut) / rateCurrencyIn);
 	};
 
 	const hideResult = () => {
